@@ -28,7 +28,7 @@ public class Ex03_Variable02 {
 	    // => 기본 자료형을 지원해주는 클래스 (모든 기본자료형에 있음)
 	    //    해당 클래스명은 기본 자료형의 첫글자를 대문자로 하면됨
 		
-		System.out.println("정수형의 Literal 의 범");
+		System.out.println("정수형의 Literal 의 범위");
 		System.out.println("byte => " + Byte.MIN_VALUE + "~" + Byte.MAX_VALUE);
 		System.out.println("short => " + Short.MIN_VALUE + "~" + Short.MAX_VALUE);
 		System.out.println("int => " + Integer.MIN_VALUE + "~" + Integer.MAX_VALUE);
@@ -54,7 +54,7 @@ public class Ex03_Variable02 {
 		// => 최대값(32767) : 1111 1111 1111 1111 + 1
 		//             ->  1 0000 0000 0000 0000 -> 우축의 2byte 만 남게됨
 		
-		// => short 언더플로우 (Underflow) Test : 최대값과 동
+		// => short 언더플로우 (Underflow) Test : 최대값과 동일
 		
 		System.out.printf("s_Underflow1 => sMin = %d, sMin-1 = %d \n ", sMin, (sMin - 1)); // 정산적 int 연산
 		System.out.printf("s_Underflow2 => sMin = %d, sMin-1 = %d \n ", sMin, (short)(sMin - 1));
@@ -65,7 +65,14 @@ public class Ex03_Variable02 {
 		// => 컴파일, 런타임 오류 없음
 	    float f = 1234.567f;
 	    System.out.println("실수형 by 0, 나누기 => " + (f/0));
-	    // => Infinity (무한수) -> 오버플로우(Overflow) 
+	    // => Infinity (무한수)
+	    //  -> 양의 무한대 (positive infinity) : 오버플로우(Overflow) 
+	    //  -> 음의 무한대 (positive infinity) : 언더플로우(Underflow) 
+	    
+	    // => 실수형에만 있는 특수값(언더플로우)
+	    // -> 실형으로는 표현할수 없는 가장 작은값으로써
+	    //    양의 최소값보다 작은값이 되는 경우를 의미하며
+	    //    이때 변수의 값은 0 이 됨.
 	    
 	    System.out.println("실수형 by 0, 나머지 => " + (f%0));
 	    // => NaN (Not a Number) -> 언더플로우(Underflow)
@@ -73,8 +80,8 @@ public class Ex03_Variable02 {
 	    // 비교
 	    // => 정수형,by zero
 	    // 실행시 컴파일 오류 없으나, 런타임 오류 발생 (java.lang.ArithmeticException: / by zero)
-	    System.out.println("정수형 by 0, 나누기 => " + (sMax/0));
-	    System.out.println("정수형 by 0, 나머지 => " + (sMax%0));
+	    // System.out.println("정수형 by 0, 나누기 => " + (sMax/0));
+	    // System.out.println("정수형 by 0, 나머지 => " + (sMax%0));
 		
 	}
 
