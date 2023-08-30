@@ -25,12 +25,12 @@ public class Ex04_Casting {
 		// ----------------------------------------------- 자동 형변환
 		
 		// 2. 강제 ( 디모션, demotion, 축소 형변환)
-		// => 위 21행의 i 값과 비
+		// => 위 21행의 i 값과 비교
 		
 		i = (int)d;
 		System.out.printf("디모션 demotion : i = %d \n", i);
 		
-		// => 같은크기 다Type (int, float)
+		// => 같은크기 다른Type (int, float)
 		
 		float f = 456.789f;
 		int n = 100;
@@ -39,7 +39,7 @@ public class Ex04_Casting {
 		System.out.printf("디모션 demotion : n = %d, f = %f \n", n, f);
 		
 		// => 정수형 연산의경우 
-		// 4byte 이하 type 의 정수형 연산의 경우 무조건 그 결과는 int(4byte) 로 처
+		// 4byte 이하 type 의 정수형 연산의 경우 무조건 그 결과는 int(4byte) 로 처리
 		
 		short s1 = 10, s2 = 20, s3 = 0;
 		

@@ -61,7 +61,7 @@ public class Ex02_Variable {
 		int i = 1234567890; // 선언과 동시에 초기화
 		
 		// ** 정수사용 주의사항
-		// => Jaba 는 정수 literal 을 int 로 취급
+		// => Java 는 정수 literal 을 int 로 취급
 		// => int를 초과하는  정수 literal 을 표현 못함
 		// => L/l : 반드시 long Type literal 임을 표시해야
 		
