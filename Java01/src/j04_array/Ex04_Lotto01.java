@@ -54,20 +54,16 @@ public class Ex04_Lotto01 {
 		
 		// 4) 최대값과 최소값 출력
 		
-		int max = lotto[0];
-		int min = lotto[0];
-		
-		for(int i = 0; i < lotto.length; i++) {
-			
-			if( max < lotto[i]) {
-				max = lotto[i];
-			}
-			
-			if( min > lotto[i]) {
-				min = lotto[i];
-			}
-			
-		}
+		  int max = lotto[0]; int min = lotto[0];
+		  
+		  for(int i = 0; i < lotto.length; i++) {
+		  
+		  if( max < lotto[i]) { max = lotto[i]; }
+		  
+		  if( min > lotto[i]) { min = lotto[i]; }
+		  
+		  }
+		 
 
 	
 		
