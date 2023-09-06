@@ -26,6 +26,9 @@ class Student {
     private int kor;
     private int eng;
     private int math;
+    
+    // package Test 용 변수선언
+    public static int ddd = 100;
 	
 	// 2) 메서드
 	// => 생성자
@@ -39,6 +42,7 @@ class Student {
         this.math = math;
      }
 	
+    // 2) 메서
 	// => setter/getter
     public void setName(String name) { this.name = name; }
     public String getName() { return name; }
