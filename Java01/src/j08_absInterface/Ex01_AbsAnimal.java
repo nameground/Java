@@ -34,7 +34,6 @@ abstract class Animal {
 	abstract void sound();
 	abstract void special();
 
-
 }
 
 class Cat extends Animal {

@@ -76,10 +76,19 @@ public class Ex02_AbsInterface {
 		c2.special();
 		
 		// 2) 다형성 적용
+		// => 후손은 조상의 Type 이 될 수 있다
+		// => 반대는 성립안됨 (조상이 후손 Type 이 될수없음)
 		Animali animal = new Dogi(); // Cati() , Eaglei() , Dogi()
 		animal.breath();
 		animal.sound();
 		animal.special();
+		
+		// 비교 Test
+		animal = c1;
+		animal = c2; // Animali animal = new Cati(); 와 동일구문
+		// c2 = c1;     // 컴파일 오류, Cati c2 = new Animali(); 와 동일구문
+		// c2 = animal; // 컴파일 오류, Cati c2 = new Animali(); 와 동일구문
+		
 		
 		// 3) 메서드 호출
 		 animalUse(c1);
