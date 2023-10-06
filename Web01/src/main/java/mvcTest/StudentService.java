@@ -1,4 +1,4 @@
-package jdbc02;
+package mvcTest;
 
 import java.util.List;
 
@@ -12,10 +12,6 @@ public class StudentService {
 	// ** selectOne
 	public StudentDTO selectOne(StudentDTO dto) {
 		return dao.selectOne(dto);
-	}
-	// ** Group 적용
-	public List<GroupDTO> groupList() {
-		return dao.groupList();
 	}
 	
 	// ** insert
