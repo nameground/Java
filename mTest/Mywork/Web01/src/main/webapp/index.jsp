@@ -12,6 +12,7 @@
 <hr>
 <img src="./images/a2.png" width ="400" height="300">
 <hr>
- &nbsp; <a href="/Web01/helloS">HelloServelt</a>     
+ &nbsp; <a href="/Web01/helloS">HelloServelt</a> <br>
+ &nbsp; <a href="/Web01/lifecycle">ServletLF</a>
 </body>
 </html>
