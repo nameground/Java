@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Ex01_Adder
- */
 @WebServlet("/adder")
 public class Ex01_Adder extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,23 +18,20 @@ public class Ex01_Adder extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1) 요청분석
+		// 1) 요청분석 
 		// => request Parameter 처리
-		int num1 = Integer.parseInt( request.getParameter("num1"));
-		int num2 = Integer.parseInt( request.getParameter("num2"));
+		int num1=Integer.parseInt(request.getParameter("num1")); 
+		int num2=Integer.parseInt(request.getParameter("num2")); 
 		
 		// 2) Service 처리
 		// 3) 결과 (View) 처리
-		// => 한글, 출력객체 생성 & 출력
-		response.setContentType("text/html; charset = UTF-8");
+		// => 한글처리, 출력객체 생성 & response 에 담기
+		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		out.print("<html><body>");
-		out.print("<h2 style='color:blue;'>** Adder Test **</h2>");
-		out.print("<h3> n1 => " + num1  +"</h3>");
-		out.print("<h3> n2 => " + num2  +"</h3>");
-		out.print("<h3> n1 + n2 => " + (num1 + num2) + "</h3>");
-		out.print("</body></html>");
+		out.print("<h2>** Adder Test **</h2>");
 		
+		//out.print("<h3>=> "+num1+ " + "+num2+" = "+(num1+num2)+"</h3>");
+		out.printf("<h3>=> %d+%d = %d</h3>",num1,num2,(num1+num2));
 	}
 
-}
+}//class

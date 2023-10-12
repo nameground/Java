@@ -26,5 +26,9 @@
    <url-pattern>/helloS</url-pattern>
    <url-pattern>/77</url-pattern>
 </servlet-mapping>
-  
+ <!-- Session Time 설정
+          => 단위 : 분, 0또는 음수를 사용하면 무한시간 -->
+   <session-config>
+      <session-timeout>0</session-timeout>
+   </session-config>
 </web-app>

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import mvcTest.StudentDTO;
 import mvcTest.StudentService;
 
-@WebServlet("/sList01")
+@WebServlet("/list")
 public class Ex02_MVC01List extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
