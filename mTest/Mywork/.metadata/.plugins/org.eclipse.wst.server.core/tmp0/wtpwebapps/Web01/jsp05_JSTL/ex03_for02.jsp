@@ -19,6 +19,7 @@
 => 결과
 </pre>
 <b>
+<%-- <c:forEach var="i" begin="1" end="10" step="1" varStatus="vs"> --%>
 <c:forEach var="i" begin="1" end="10" step="1" varStatus="vs">
 	 ${i}
 	 ${vs.last ? "" : ","}
@@ -84,17 +85,6 @@
    ${i%5==0 ? "<br>" : ","}
 </c:forEach>
 <hr>
-=> Table (중첩 for 구문)<br>
-<table>
-   <c:forEach var="i" begin="1" end="26" step="5" >
-   <tr align="right">
-      <c:forEach var="j" begin="${i}" end="${i+4}" step="1">
-         <td width="50">${j}</td>
-      </c:forEach>
-   </tr>
-   </c:forEach>
-</table>
-
 
 </body>
 </html>

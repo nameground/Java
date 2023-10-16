@@ -25,8 +25,13 @@
 	if ( list!=null ) {
 		for ( StudentDTO s:list ) { %>
 		<tr>
-			<td><%=s.getSno()%></td><td><%=s.getName()%></td><td><%=s.getAge()%></td><td><%=s.getJno()%></td>
-			<td><%=s.getInfo()%></td><td><%=s.getPoint()%></td></td><td><%=s.getBirthday()%></td>
+			<td><%=s.getSno()%></td>
+			<td><%=s.getName()%></td>
+			<td><%=s.getAge()%></td>
+			<td><%=s.getJno()%></td>
+			<td><%=s.getInfo()%></td>
+			<td><%=s.getPoint()%></td>
+			<td><%=s.getBirthday()%></td>
 		</tr>
 <%		} //for
 	}else { %>

@@ -162,3 +162,13 @@
 10월 12, 2023 17:28:52.64 [6624:9368:1012/172852.064:ERROR:device_event_log_impl.cc(225)] [17:28:52.064] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
 10월 12, 2023 17:55:24.874 [6624:9368:1012/175524.874:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
 10월 12, 2023 17:55:26.41 [6624:9368:1012/175526.041:ERROR:device_event_log_impl.cc(225)] [17:55:26.041] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+
+10월 16, 2023 09:42:48.54 NEW SESSION
+10월 16, 2023 09:42:48.54 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 16, 2023 10:04:53.119 [8676:8604:1016/100453.118:ERROR:device_event_log_impl.cc(225)] [10:04:53.118] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: ��Ұ� �����ϴ�. (0x490)
+10월 16, 2023 10:22:35.692 [8676:8604:1016/102235.692:ERROR:device_event_log_impl.cc(225)] [10:22:35.691] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: ��� ������ �����Ͱ� �����ϴ�. (0x103)
+10월 16, 2023 10:22:57.668 [8676:8604:1016/102257.668:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 16, 2023 10:22:58.378 [8676:8604:1016/102258.378:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 16, 2023 10:23:55.464 [8676:8604:1016/102355.464:ERROR:device_event_log_impl.cc(225)] [10:23:55.463] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: ��� ������ �����Ͱ� �����ϴ�. (0x103)
+10월 16, 2023 12:23:02.557 [8676:8604:1016/122302.556:ERROR:device_event_log_impl.cc(225)] [12:23:02.556] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: ��� ������ �����Ͱ� �����ϴ�. (0x103)
+10월 16, 2023 15:20:31.562 [8676:8604:1016/152031.562:ERROR:device_event_log_impl.cc(225)] [15:20:31.562] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.

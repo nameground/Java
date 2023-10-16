@@ -1,0 +1,39 @@
+package mvcTest;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/join")
+public class MVC2_sJoin extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public MVC2_sJoin() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 1. 요청분석 % Service
+		// => Post Test 도 할 것이므로 한글처리 필수
+		// => request Parameter 처리
+		request.setCharacterEncoding("UTF-8");
+		String name = request.getParameter("name");
+		int age = Integer.parseInt( request.getParameter("age"));
+		int jno = Integer.parseInt( request.getParameter("jno"));
+		String info = request.getParameter("info");
+		double point = Double.parseDouble(request.getParameter("point"));
+		String birthday = request.getParameter("birthday");
+		
+		// 2. 결과처리
+		
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

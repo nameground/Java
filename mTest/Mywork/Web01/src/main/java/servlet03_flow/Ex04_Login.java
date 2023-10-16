@@ -24,7 +24,7 @@ public class Ex04_Login extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1. 요청분석
-		//  => 한글 , request의 Parameter 처리
+		// => 한글 , request의 Parameter 처리
 		request.setCharacterEncoding("UTF-8");
 		
 		
@@ -56,6 +56,7 @@ public class Ex04_Login extends HttpServlet {
 			// => ~~님 : index 화면에 항상 이름이 표시 되도록
 			// => 그러므로 로그인정보 보관(session에)
 			request.getSession().setAttribute("loginName", name);
+			request.getSession().setAttribute("loginID", sno);
 			
 			System.out.println("** 로그인 성공 ** ");
 		}else {
