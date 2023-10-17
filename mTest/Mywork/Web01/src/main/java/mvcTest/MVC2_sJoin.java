@@ -17,7 +17,7 @@ public class MVC2_sJoin extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 1. 요청분석 % Service
+		// 1. 요청분석 & Service
 		// => Post Test 도 할 것이므로 한글처리 필수
 		// => request Parameter 처리
 		request.setCharacterEncoding("UTF-8");
