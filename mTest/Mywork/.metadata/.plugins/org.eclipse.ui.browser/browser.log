@@ -172,3 +172,6 @@
 10월 16, 2023 10:23:55.464 [8676:8604:1016/102355.464:ERROR:device_event_log_impl.cc(225)] [10:23:55.463] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: ��� ������ �����Ͱ� �����ϴ�. (0x103)
 10월 16, 2023 12:23:02.557 [8676:8604:1016/122302.556:ERROR:device_event_log_impl.cc(225)] [12:23:02.556] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: ��� ������ �����Ͱ� �����ϴ�. (0x103)
 10월 16, 2023 15:20:31.562 [8676:8604:1016/152031.562:ERROR:device_event_log_impl.cc(225)] [15:20:31.562] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+
+10월 18, 2023 11:02:26.576 NEW SESSION
+10월 18, 2023 11:02:26.576 [1560:1620:1018/110226.565:ERROR:interface_endpoint_client.cc(702)] Message 5 rejected by interface blink.mojom.WidgetHost

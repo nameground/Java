@@ -19,17 +19,19 @@
 </c:if>
 
 <hr>
-<img src="./images/tulips.png" width ="400" height="300">
+<img src="./images/last.png" width ="400" height="300">
 <hr>
 <c:if test="${not empty sessionScope.loginName }">
 	&nbsp;<a href="/Web02/logout">Logout</a> &nbsp;
-	&nbsp;<a href="/Web02/detail">MyInfo</a> <br>
+	&nbsp;<a href="/Web02/detail">MyInfo</a> &nbsp;
+	&nbsp;<a href="/Web02/mdetail.do">MyInfof</a> <br>
 </c:if>
 <c:if test="${empty sessionScope.loginName }">
 	&nbsp;<a href="/Web02/member/loginForm.jsp">Login Form</a>&nbsp;
 	&nbsp;<a href="/Web02/member/memberJoin.jsp">Join</a> <br>
 </c:if>
 
-&nbsp;<a href="/Web02/mlist">List2</a>
+&nbsp;<a href="/Web02/mlist">List</a>
+&nbsp;<a href="/Web02/mlist.do">ListF</a>
 </body>
 </html>
