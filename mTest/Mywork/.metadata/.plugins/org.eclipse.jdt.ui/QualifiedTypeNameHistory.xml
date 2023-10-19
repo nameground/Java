@@ -5,4 +5,9 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="mvcTest.StudentService"/>
     <fullyQualifiedTypeName name="mvcTest.StudentDTO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 </qualifiedTypeNameHistroy>
