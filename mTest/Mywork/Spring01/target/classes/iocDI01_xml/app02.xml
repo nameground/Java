@@ -22,6 +22,5 @@
 	 	- 애노테이션 방식에서는 @Scope 애노테이션으로 지정.
  -->
  	<bean id="mytv" class="iocDI01_xml.SsTVi" lazy-init="false" scope="prototype" />
-	<bean id="mytv2" class="iocDI01_xml.LgTVi" lazy-init="false" scope="singleton" />
-
+	<bean id="lg" class="iocDI01_xml.LgTVi" lazy-init="false" scope="singleton" />
 </beans>
