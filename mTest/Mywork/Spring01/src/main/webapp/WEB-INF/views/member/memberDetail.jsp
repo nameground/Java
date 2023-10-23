@@ -55,6 +55,7 @@
 	</c:if>
 </table>
 <hr>
-
+&nbsp; <a href="javascript:history.go(-1)">이전</a>&nbsp;
+&nbsp; <a href="/Web02/index.jsp">home</a> <br>
 </body>
 </html>

@@ -18,6 +18,6 @@
 </c:if>
 <hr>
 <a href="mlist">MList</a> <br>
-<a href="mlistsp">MList</a> 
+<a href="mlistsp">MListsp</a> 
 </body>
 </html>
