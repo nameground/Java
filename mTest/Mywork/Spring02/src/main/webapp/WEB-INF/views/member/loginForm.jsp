@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="/green/resources/myLib/myStyle.css">
 <title>**  member Login Test **</title>
 </head>
 <body>
@@ -35,7 +36,7 @@ message : ${requestScope.message}
 </c:if>
 <hr>
 
-&nbsp; <a href="home">Home</a>&nbsp;
+&nbsp; <a href="/green/home">Home</a>&nbsp;
 
 </body>
 </html>

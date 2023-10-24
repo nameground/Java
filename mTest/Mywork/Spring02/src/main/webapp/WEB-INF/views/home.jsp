@@ -24,18 +24,19 @@
 <hr>
 <!-- Login 전 -->
 <c:if test="${empty sessionScope.loginID}">
-  &nbsp; <a href="login">Login_Get</a>  &nbsp;   <!-- get으로 요청 -->
-  &nbsp; <a href="join">JoinF_Get</a>  &nbsp;
+  &nbsp; <a href="member/loginForm">LoginF</a>  &nbsp;   <!-- get으로 요청 -->
+  &nbsp; <a href="member/memberJoin">JoinF</a>  &nbsp;
 </c:if>
 <!-- Login 후 -->
 <c:if test="${not empty sessionScope.loginID}">
-  &nbsp; <a href="logout">Logout</a>  &nbsp;
-  &nbsp; <a href="mdetail">내정보</a>  &nbsp;
-  &nbsp; <a href="mdetail">내정보수정</a>  &nbsp;
-  &nbsp; <a href="mdelete?id=${sessionScope.loginID}">탈퇴</a>  &nbsp;
+  &nbsp; <a href="member/logout">Logout</a>  &nbsp;
+  &nbsp; <a href="member/mdetail?id=${sessionScope.loginID}">내정보</a>  &nbsp;
+  &nbsp; <a href="member/mdetail?jCode=U&id=${sessionScope.loginID}">내정보수정</a>  &nbsp;
+  &nbsp; <a href="member/mdelete?id=${sessionScope.loginID}">탈퇴</a>  &nbsp;
 </c:if>
 <br>
- &nbsp; <a href="mlist">mList</a>  &nbsp;
+ &nbsp; <a href="member/memberList">mList</a>  &nbsp;
+ &nbsp; <a href="member/log4jtest">롬복log4jtest</a>  &nbsp;
 
 </body>
 </html>
