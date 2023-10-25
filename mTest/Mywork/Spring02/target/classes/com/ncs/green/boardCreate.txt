@@ -29,3 +29,10 @@ select * from board;
 
 3. Spring02 구현2
 // => 댓글 달기, 페이징
+
+// =======================================================================
+
+*** jo Table 을 이용하여 기본 CRUD 를 구현
+=> JoDTO, JoDAO, JoService, JoServiceImpl, JoController
+=> joList, joDetail, joInsert, joUpdate 
+

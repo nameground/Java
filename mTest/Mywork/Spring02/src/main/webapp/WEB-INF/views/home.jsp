@@ -37,6 +37,8 @@
 <br>
  &nbsp; <a href="member/memberList">mList</a>  &nbsp;
  &nbsp; <a href="member/log4jtest">롬복log4jtest</a>  &nbsp;
+ &nbsp; <a href="board/boardList">bList</a>  &nbsp;
+ &nbsp; <a href="jo/joList">jList</a>  &nbsp;
 
 </body>
 </html>
