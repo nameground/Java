@@ -13,4 +13,6 @@ public class JoDTO {
 	private String id;
 	private String project;
 	private String slogan;
+
+	private String cname; // 조장이름, 필요시사용
 }

@@ -5,14 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css"
-	href="/green/resources/myLib/myStyle.css">
 <title>Spring_MVC2 Board_Insert</title>
 </head>
 <body>
-<h2>Spring_MVC2 Board_Insert</h2>
+<h2>Spring_MVC2 Board_ReplyInsert</h2>
 
-<form action="binsert" method="post">
+<form action="rinsert" method="post">
 	<table>
 		<tr height="40">
 			<th bgcolor="violet">I D</th>
@@ -26,6 +24,16 @@
 			<th bgcolor="violet">Content</th>
 			<td>
 				<textarea rows="5" cols="50" name="content"></textarea>
+			</td>
+		</tr>
+		<!-- 부모글의 root, indent 값이 있어야 댓글을 등록할 수 있음 
+			 => 그러므로 이 값들을 hidden 으로 보관했다가 서버로 전달 되도록 함 -->
+		<tr height="40">
+			<td></td>
+			<td>
+				<input type="hidden" name="root" value="${boardDTO.root}" >
+				<input type="hidden" name="step" value="${boardDTO.step}" >
+				<input type="hidden" name="indent" value="${boardDTO.indent}" >
 			</td>
 		</tr>
 		<tr height="40">

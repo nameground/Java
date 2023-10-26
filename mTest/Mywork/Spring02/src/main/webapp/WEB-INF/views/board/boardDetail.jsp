@@ -50,7 +50,8 @@
 	<hr>
 	<!-- 로그인 한 경우에는 새글등록, 답글등록 가능해짐 -->
 	&nbsp;<a href="boardInsert">새글등록</a>&nbsp;
-	&nbsp;<a href="replyInsert">답글등록</a>&nbsp;
+	<!-- 댓글등록을 위해 부모글의 root, indent 값이 필요하기 때문에 서버로 보내주어야 함 (쿼리스트링으로 작성) -->
+	&nbsp;<a href="replyInsert?root=${apple.root}&step=${apple.step}&indent=${apple.indent}">답글등록</a>&nbsp;
 	<!-- 로그인id 와 글쓴이id 가 동일하면 수정, 삭제 가능 -->
 	<c:if test="${sessionScope.loginID == requestScope.apple.id}">
 		&nbsp;<a href="bdetail?jCode=U&seq=${requestScope.apple.seq}">글수정</a> &nbsp;
