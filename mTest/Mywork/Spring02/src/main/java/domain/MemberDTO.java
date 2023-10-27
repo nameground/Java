@@ -35,5 +35,6 @@ public class MemberDTO {
 	private Double point;
 	private String birthday;
 	private String rid; //추천인
+	private String uploadfile;
 
 }

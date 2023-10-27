@@ -28,6 +28,7 @@
       <th>Point</th>
       <th>Birthday</th>
       <th>Rid</th>
+      <th>Image</th>
       <!-- 관리자 기능 추가 -->
       <c:if test="${sessionScope.loginID == 'admin' }">
          <th>Delete</th>
@@ -45,9 +46,12 @@
             <td>${s.point}</td>
             <td>${s.birthday}</td>
             <td>${s.rid}</td>
+            <!-- 관리자 기능 추가 -->
             <c:if test="${sessionScope.loginID == 'admin' }">
                <td align="center"><a href="mdelete?id=${s.id}">삭제</a></td>
             </c:if>
+            <!-- Image 기능 추가 -->
+            <td><img alt="MyImage" src="/green/${s.uploadfile}" width="50" height="70"></td>
          </tr>
       </c:forEach>
    </c:if>

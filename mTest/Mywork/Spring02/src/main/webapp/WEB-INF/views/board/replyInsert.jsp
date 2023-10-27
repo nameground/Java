@@ -13,15 +13,15 @@
 <form action="rinsert" method="post">
 	<table>
 		<tr height="40">
-			<th bgcolor="violet">I D</th>
+			<th bgcolor="blue">I D</th>
 			<td><input type="text" name="id" value="${sessionScope.loginID}" readonly size="20"></td>
 		</tr>
 		<tr height="40">
-			<th bgcolor="violet">Title</th>
+			<th bgcolor="blue">Title</th>
 			<td><input type="text" name="title" size="48"></td>
 		</tr>
 		<tr height="40">
-			<th bgcolor="violet">Content</th>
+			<th bgcolor="blue">Content</th>
 			<td>
 				<textarea rows="5" cols="50" name="content"></textarea>
 			</td>
