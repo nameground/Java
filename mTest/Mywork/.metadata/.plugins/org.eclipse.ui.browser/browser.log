@@ -207,3 +207,24 @@
 10월 26, 2023 12:34:04.907 [5140:5132:1026/123404.907:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.124 s for first_image_paint 0.111 s
 10월 26, 2023 12:34:04.954 [5140:5132:1026/123404.953:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.124 s for first_image_paint 0.111 s
 10월 26, 2023 16:11:47.525 [5140:5132:1026/161147.525:ERROR:interface_endpoint_client.cc(702)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+10월 30, 2023 11:37:55.30 NEW SESSION
+10월 30, 2023 11:37:55.30 [3948:1396:1030/113755.028:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:55.215 [3948:1396:1030/113755.215:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:55.332 [3948:1396:1030/113755.332:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:55.461 [3948:1396:1030/113755.460:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:55.646 [3948:1396:1030/113755.646:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:56.44 [3948:1396:1030/113756.044:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:56.480 [3948:1396:1030/113756.479:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:37:56.563 [3948:1396:1030/113756.563:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.174 s for first_image_paint 0.168 s
+10월 30, 2023 11:39:54.354 [3948:1396:1030/113954.354:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:54.556 [3948:1396:1030/113954.556:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:54.676 [3948:1396:1030/113954.675:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:54.844 [3948:1396:1030/113954.843:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:54.958 [3948:1396:1030/113954.957:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:55.104 [3948:1396:1030/113955.103:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:55.507 [3948:1396:1030/113955.506:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:56.48 [3948:1396:1030/113956.047:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 11:39:56.147 [3948:1396:1030/113956.147:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 0.132 s for first_image_paint 0.118 s
+10월 30, 2023 12:44:55.28 [3948:1396:1030/124455.028:ERROR:interface_endpoint_client.cc(702)] Message 5 rejected by interface blink.mojom.WidgetHost
+10월 30, 2023 16:33:56.538 [3948:1396:1030/163356.538:ERROR:device_event_log_impl.cc(225)] [16:33:56.538] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
