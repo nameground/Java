@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css"
-	href="/green/resources/myLib/myStyle.css">
+	href="/Spring02/resources/myLib/myStyle.css">
 <title>Spring_MVC2 Board_Insert</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
 
 <hr>
 
-&nbsp; <a href="/green/home">home</a>&nbsp;
+&nbsp; <a href="/Spring02/home">home</a>&nbsp;
 &nbsp; <a href="javascript:history.go(-1)">이전</a>&nbsp;
 
 </body>

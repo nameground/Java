@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Spring_MVC2 MemberUpdate</title>
-<script src="/green/resources/myLib/jquery-3.2.1.min.js"></script>
+<script src="/Spring02/resources/myLib/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <h2>Spring_MVC2 MemberUpdate</h2>
@@ -78,7 +78,7 @@
 			<tr height="40">
 				<th bgcolor="khaki">Image</th>
 				<td>
-					<img alt="MyImage" src="/green/${apple.uploadfile}" class="select_img" width="50" height="70">
+					<img alt="MyImage" src="/Spring02/${apple.uploadfile}" class="select_img" width="50" height="70">
 					<input type="hidden" name="uploadfile" value="${apple.uploadfile}"><br>					
 					<input type="file" name="uploadfilef" id="uploadfilef"size="20">
 				</td>
@@ -121,7 +121,7 @@
 
 <hr>
 
-&nbsp; <a href="/green/home">home</a>&nbsp;
+&nbsp; <a href="/Spring02/home">home</a>&nbsp;
 &nbsp; <a href="javascript:history.go(-1)">이전</a>&nbsp;
 
 </body>

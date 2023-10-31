@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css"
-	href="/green/resources/myLib/myStyle.css">
+	href="/Spring02/resources/myLib/myStyle.css">
 <title>Spring_MVC2 BoardList</title>
 </head>
 <body>
@@ -65,6 +65,6 @@
 <c:if test="${not empty loginID}">
 	&nbsp; <a href="boardInsert">새글등록</a> 
 </c:if>
-&nbsp; <a href="/green/home">Home</a> 
+&nbsp; <a href="/Spring02/home">Home</a> 
 </body>
 </html>

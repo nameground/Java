@@ -4,16 +4,19 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.http.HttpRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -156,11 +159,45 @@ public class MemberController {
 	//      -> @Autowired : 멤버마다 모두 적용시켜야함
 	//      -> @AllArgsConstructor : 클래스에 1개만 적용하면됨
 	MemberService service;
+	PasswordEncoder passwordEncoder;
 	
 	// @Autowired
 	// OtherService1 service1;
 	// @Autowired
 	// OtherService2 service2;
+	
+	// ** File Download **********************************************
+	// => 전달받은 path 와 파일명으로 File 객체를 만들어 찾아서 response에 담아주면,
+	//    클라이언트의 웹브라우져로 전달됨.
+	@GetMapping("/download")
+	public String download(HttpServletRequest request, Model model, 
+						   @RequestParam("dnfile") String dnfile) {
+		// => 동일한 표현 String dnfile = request.getParameter("dnfile");
+		
+		// 1) 파일 & path 확인
+		String realPath = request.getRealPath("/"); //deprecated Method
+		String fileName = dnfile.substring(dnfile.lastIndexOf("/")+1);
+		// => dnfile: resources/uploadImages/robot.png
+
+		// => realpath 확인, 개발중인지, 배포했는지 에 따라 결정
+		// => 해당화일 File 찾기위함
+		if ( realPath.contains(".eclipse.") )  // 개발중 (배포전: eclipse 개발환경) 
+			realPath="C:\\IDESET\\Web\\mTest\\Mywork\\Spring02\\src\\main\\webapp\\resources\\uploadImages\\";
+		else realPath+="resources\\uploadImages\\";
+		realPath+=fileName;  // ~~~~~\\resources\\uploadImages\\robot.png -> path 완성
+		
+		// 2) 해당 파일 (path + fileName) File Type 으로 객체화
+		File file = new File(realPath);
+		model.addAttribute("downloadFile", file);
+
+		// 3) response 처리 (response의 body 에 담아줌)
+		// => Java File 객체 -> File(내용) 정보를 response 에 전달
+		// => 이것을 처리할 View 해결사가 필요함 (DownloadView)
+		//    이 해결사와 return 값의 연결은 설정파일(servlet~~~.xml) 에서
+		return "downloadView";
+		// => 주의 : ~~/downloadView.jsp 문서가 존재하면 이것이 실행될 수 있으므로 주의
+	}
+	
 
 	// Lombok 의 Log4j Test
 	@GetMapping(value = "/log4jtest")
@@ -243,7 +280,10 @@ public class MemberController {
 		// => 성공 : id, name 은 session 에 보관, home.jsp 으로
 		// => 실패 : 재로그인 유도
 		dto = service.selectOne(dto);
-		if (dto != null && dto.getPassword().equals(password)) {
+		// if (dto != null && dto.getPassword().equals(password)) {
+		
+		// PasswordEncoder 적용 
+		if(dto != null && passwordEncoder.matches(password, dto.getPassword())) {
 			session.setAttribute("loginID",dto.getId());
 			session.setAttribute("loginName",dto.getName());
 		}else {
@@ -300,7 +340,10 @@ public class MemberController {
 		// => 성공: 로그인유도 (loginForm 으로, member/loginForm.jsp)
 		// => 실패: 재가입유도 (joinForm 으로, member/memberJoin.jsp)
 		String uri = "member/loginForm";
-
+		
+		// PasswordEncoder 적용
+		dto.setPassword(passwordEncoder.encode(dto.getPassword()));
+		
 		// ** MultipartFile ***********************
 		// => 전달된 UploadFile 정보 전달
 		// => MultipartFile 타입의 uploadfilef 의 정보에서 
@@ -406,7 +449,7 @@ public class MemberController {
 	// => 요청 : home에서 내정보수정 -> 내정보수정 Form (memberUpdate.jsp) 출력
 	// => 수정 후 submit -> 수정 Service 
 	// 		-> 성공 : detail 
-	//       -> 실패 : 재시도 유도 (memberUpdate.jsp)
+	//      -> 실패 : 재시도 유도 (memberUpdate.jsp)
 	//@RequestMapping(value = "/mupdate", method = RequestMethod.POST)
 	// ** Member Update
 		// => 요청: home 에서 내정보수정 -> 내정보수정Form (memberUpdate.jsp) 출력
@@ -459,40 +502,63 @@ public class MemberController {
 			}
 			return uri;
 		} //memberUpdte
-
-	// ===============================================================
-
-	// Member Delete : 탈퇴
-	// => 삭제대상 : Parameter 로 전달, dto 에 자동 set
-	// @RequestMapping(value = "/mdelete", method = RequestMethod.GET)
-	@GetMapping(value = "/mdelete")
-	public String mdelete(HttpSession session, MemberDTO dto, Model model, RedirectAttributes rttr) {
-
-		// 1) 본인 탈퇴
-		// 결과 : message(삭제 성공/실패), home.jsp, session 무효화
-
-		// 2) 관리자 강제 탈퇴
-		// 결과 : message(삭제 성공/실패), memberList.jsp, 
-
-		// => 본인탈퇴 or 관리자에 의한 강제탈퇴 구분이 필요
-		//    dto 의 id 와 session 의 loginID 와 같으면 본인탈퇴,
-		// 	 다르면서 session 의 loginID 값이 "admin" 이면 강제탈퇴
-
-		String uri = "redirect:/";
-		if( service.delete(dto) > 0) {
-			rttr.addFlashAttribute("message", "탈퇴 성공 1개월 후 재가입 가능");
-			if( ((String)session.getAttribute("loginID")).equals("admin") ) {
-				// 관리자에 의한 강제탈퇴
-				uri = "redirect:memberList";
-			}else {
-				// 본인 직접 탈퇴
-				session.invalidate();
-			}
-		}else {
-			rttr.addFlashAttribute("message", "탈퇴 실패");
+		
+		@GetMapping(value = "/pUpdateForm")
+		public void memberPassword() {
+			// viewName 생략 -> 요청명이 viewName 이 됨
 		}
-		return uri;
-	}
+		
+		@PostMapping(value="/pUpdate")
+		public String PWUpdte(HttpServletRequest request, 
+								  MemberDTO dto, Model model) {
+			model.addAttribute("apple", dto);
+			
+			// PasswordEncoder 적용
+			dto.setPassword(passwordEncoder.encode(dto.getPassword()));
+			
+			String uri="member/pUpdateForm";
+			if ( service.update(dto) > 0 ) {
+				model.addAttribute("message", "~~ 비밀번호 수정 성공 ~~");
+			}else {
+				model.addAttribute("message", "~~ 비밀번호 수정 실패 !! 다시 하세요 ~~");
+				uri="member/pUpdateForm";
+			}
+			return uri;
+			
+		}
+		// ===============================================================
+
+		// Member Delete : 탈퇴
+		// => 삭제대상 : Parameter 로 전달, dto 에 자동 set
+		// @RequestMapping(value = "/mdelete", method = RequestMethod.GET)
+		@GetMapping(value = "/mdelete")
+		public String mdelete(HttpSession session, MemberDTO dto, Model model, RedirectAttributes rttr) {
+
+			// 1) 본인 탈퇴
+			// 결과 : message(삭제 성공/실패), home.jsp, session 무효화
+
+			// 2) 관리자 강제 탈퇴
+			// 결과 : message(삭제 성공/실패), memberList.jsp, 
+
+			// => 본인탈퇴 or 관리자에 의한 강제탈퇴 구분이 필요
+			//    dto 의 id 와 session 의 loginID 와 같으면 본인탈퇴,
+			// 	 다르면서 session 의 loginID 값이 "admin" 이면 강제탈퇴
+
+			String uri = "redirect:/";
+			if( service.delete(dto) > 0) {
+				rttr.addFlashAttribute("message", "탈퇴 성공 1개월 후 재가입 가능");
+				if( ((String)session.getAttribute("loginID")).equals("admin") ) {
+					// 관리자에 의한 강제탈퇴
+					uri = "redirect:memberList";
+				}else {
+					// 본인 직접 탈퇴
+					session.invalidate();
+				}
+			}else {
+				rttr.addFlashAttribute("message", "탈퇴 실패");
+			}
+			return uri;
+		}
 
 	// ===============================================================
 }

@@ -13,23 +13,23 @@
 <form action="jinsert" method="post">
 	<table>
 		<tr height="40">
-			<th bgcolor="green">Jno</th>
+			<th bgcolor="Spring02">Jno</th>
 			<td><input type="text" name="jno" value="${sessionScope.Jno}"size="20"></td>
 		</tr>
 		<tr height="40">
-			<th bgcolor="green">Jname</th>
+			<th bgcolor="Spring02">Jname</th>
 			<td><input type="text" name="jname" size="20"></td>
 		</tr>
 		<tr height="40">
-			<th bgcolor="green">I D</th>
+			<th bgcolor="Spring02">I D</th>
 			<td><input type="text" name="id" size="20"></td>
 		</tr>
 		<tr height="40">
-			<th bgcolor="green">Project</th>
+			<th bgcolor="Spring02">Project</th>
 			<td><input type="text" name="project" size="20"></td>
 		</tr>
 		<tr height="40">
-			<th bgcolor="green">Slogan</th>
+			<th bgcolor="Spring02">Slogan</th>
 			<td><input type="text" name="slogan" size="20"></td>
 		</tr>
 		<tr height="40">
@@ -50,7 +50,7 @@
 
 <hr>
 
-&nbsp; <a href="/green/home">home</a>&nbsp;
+&nbsp; <a href="/Spring02/home">home</a>&nbsp;
 &nbsp; <a href="javascript:history.go(-1)">이전</a>&nbsp;
 
 </body>

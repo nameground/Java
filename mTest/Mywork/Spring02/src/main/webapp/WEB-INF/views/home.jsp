@@ -4,7 +4,7 @@
 <head>
 	<meta cahrset="UTF-8">
    <title>Home</title>
-   <link rel="stylesheet" type="text/css" href="/green/resources/myLib/myStyle.css">
+   <link rel="stylesheet" type="text/css" href="/Spring02/resources/myLib/myStyle.css">
 </head>
 <body>
 <h1>
@@ -20,7 +20,7 @@
    =>${requestScope.message} <br>
 </c:if>
 <hr>
-<img alt="mainImage" src="/green/resources/images/tulips.png" width="300" height="200">
+<img alt="mainImage" src="/Spring02/resources/images/tulips.png" width="300" height="200">
 <hr>
 <!-- Login 전 -->
 <c:if test="${empty sessionScope.loginID}">
@@ -32,13 +32,15 @@
   &nbsp; <a href="member/logout">Logout</a>  &nbsp;
   &nbsp; <a href="member/mdetail?id=${sessionScope.loginID}">내정보</a>  &nbsp;
   &nbsp; <a href="member/mdetail?jCode=U&id=${sessionScope.loginID}">내정보수정</a>  &nbsp;
+  &nbsp; <a href="member/pUpdateForm">비밀번호수정</a>  &nbsp;
   &nbsp; <a href="member/mdelete?id=${sessionScope.loginID}">탈퇴</a>  &nbsp;
 </c:if>
 <br>
  &nbsp; <a href="member/memberList">mList</a>  &nbsp;
  &nbsp; <a href="member/log4jtest">롬복log4jtest</a>  &nbsp;
  &nbsp; <a href="board/boardList">bList</a>  &nbsp;
- &nbsp; <a href="jo/joList">jList</a>  &nbsp;
+ &nbsp; <a href="jo/joList">jList</a><br>
+ &nbsp; <a href="bcrypt">BCrypt</a>  &nbsp;
 
 </body>
 </html>

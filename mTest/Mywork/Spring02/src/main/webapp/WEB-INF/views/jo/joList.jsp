@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>** JoList Spring_MVC2 **</title>
-	<link rel="stylesheet" type="text/css" href="/green/resources/myLib/myStyle.css">
+	<link rel="stylesheet" type="text/css" href="/Spring02/resources/myLib/myStyle.css">
 </head>
 <body>
 <h2>** JoList Spring_MVC2 **</h2>
@@ -41,6 +41,6 @@
 <hr>
 &nbsp;<a href="joInsert">조등록</a>&nbsp;
 &nbsp;<a href="javascript:history.go(-1)">이전으로</a>&nbsp;
-&nbsp;<a href="/green/home">[Home]</a>
+&nbsp;<a href="/Spring02/home">[Home]</a>
 </body>
 </html>
