@@ -36,7 +36,7 @@
     <fullyQualifiedTypeName name="java.net.http.HttpRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.password.PasswordEncoder"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 </qualifiedTypeNameHistroy>
