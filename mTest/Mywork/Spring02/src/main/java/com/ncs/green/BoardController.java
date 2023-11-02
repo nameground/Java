@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import criTest.PageMaker;
+import criTest.SearchCriteria;
 import domain.BoardDTO;
 //import domain.MemberDTO;
 import lombok.AllArgsConstructor;
@@ -21,6 +23,31 @@ import service.BoardService;
 public class BoardController {
 
 	BoardService service;
+	
+	// Board_Cri_Paging
+	@GetMapping("/bcriList")
+	public void bcriList(Model model, SearchCriteria cri, PageMaker pageMaker) {
+		// 1) Criteria 처리
+		// => ver01 : currPage, rowsPerPage 값들은 Parameter로 전달되어 자동으로 cri에 set
+		// => ver02 : ver01 + searchType, Keyword 도 동일하게 set 
+		cri.setSnoEno();
+		
+		// 2) Service 처리
+		// => ver01, ver02 모두 같은 서비스를 사용
+		//    단, MapperInterface 에서 사용하는 SQL 구문만 변경해서 사용 
+		//    BoardMapper.xml 에 SQL 구문 추가, Interface 수정
+		model.addAttribute("banana", service.bcriList(cri));
+		
+		// 3) View 처리 : PageMaker필요
+		// => cri, totalRpwsCount (DB 에서 Read)
+		pageMaker.setCri(cri);
+		pageMaker.setTotalRowsCount(service.criTotalCount(cri)); 
+		// => ver01 : // 전체 rows 개수 : ver01 => 전체 DB 개수를 읽어와야함
+		// 	  ver02 : 검색조건에 해당하는 rows 개수
+		model.addAttribute("pageMaker", pageMaker);
+	}
+	
+	
 	// replyInsert
 	// => replyInsert Form 출력 메서드
 	//    bdetail 화면에서 요청시 쿼리스트링으로 보낸 부모글의 root, step, indent 를
