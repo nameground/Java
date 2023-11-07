@@ -53,7 +53,7 @@ public class BoardServiceImpl implements BoardService {
 	public int rinsert(BoardDTO dto) {
 		if(mapper.rinsert(dto) >0) {
 			// stepUpdate
-			System.out.println("stepUpdate Count => " + mapper.rinsert(dto));
+			System.out.println("stepUpdate Count => " + mapper.stepUpdate(dto));
 			return 1;
 		}else {
 			return 0;

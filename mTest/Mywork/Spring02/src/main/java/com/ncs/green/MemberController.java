@@ -445,7 +445,8 @@ public class MemberController {
 		dto.setUploadfile(file2);
 		
 		// ==========================================================================
-	      // ** Transaction_AOP 적용 ********************* 
+		
+	    // ** Transaction_AOP 적용 ********************* 
 		// 1. 준비: pom.xml (dependency) 확인
 		// =>  AspectJ(기본제공), AspectJ Weaver(추가)
 
