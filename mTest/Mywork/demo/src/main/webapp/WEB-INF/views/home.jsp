@@ -4,7 +4,7 @@
 <head>
 	<meta cahrset="UTF-8">
    <title>Home</title>
-   <link rel="stylesheet" type="text/css" href="/Spring02/resources/myLib/myStyle.css">
+   <link rel="stylesheet" type="text/css" href="/resources/myLib/myStyle.css">
 </head>
 <body>
 <h1>
@@ -40,6 +40,7 @@
  &nbsp; <a href="board/boardList">bList</a>  &nbsp;
  &nbsp; <a href="board/bcriList">bcriList</a>  &nbsp;
  &nbsp; <a href="jo/joList">jList</a><br>
+ &nbsp; <a href="/axtestform">AjaxTest</a><br>
 
 </body>
 </html>
