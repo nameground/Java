@@ -11,10 +11,17 @@ import mapperInterface.MemberMapper;
 
 @Service
 public class MemberServiceImpl implements MemberService {
+	
 	// ** 전역변수 정의
 	//MemberDAO dao = new MemberDAO();
 	@Autowired
 	MemberMapper mapper;
+	
+	// ** RTestController incheck2 Test
+	@Override
+	public MemberDTO selectOneJno(String id, Integer jno) {
+		return mapper.selectOneJno(id, jno);
+	}
 	
 	// ** Jo_List 추가
 	@Override

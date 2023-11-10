@@ -20,7 +20,7 @@
    =>${requestScope.message} <br>
 </c:if>
 <hr>
-<img alt="mainImage" src="/resources/images/tulips.png" width="300" height="200">
+<img alt="mainImage" src="/resources/images/jingjing.gif" width="500" height="500">
 <hr>
 <!-- Login 전 -->
 <c:if test="${empty sessionScope.loginID}">

@@ -258,7 +258,7 @@
       multipart/form-data로 지정이 되어 있어야 서버에서 정상적으로 데이터를 처리할 수 있다.     
 -->
 
-	<form action="join" method="post" enctype="multipart/form-data">
+	<form action="join" method="post" enctype="multipart/form-data" id="myform">
 		<table>
 			<tr height="40">
 				<th bgcolor="aqua">I D</th>
@@ -365,9 +365,11 @@
          </script>
 			<tr height="40">
 				<th></th>
-				<td><input type="submit" value="가입" id="submitTag"
-					onclick="return inCheck()" disabled> &nbsp;&nbsp;&nbsp; <input
-					type="reset" value="취소"></td>
+				<td>
+					<input type="submit" value="가입" id="submitTag"onclick="return inCheck()" disabled> &nbsp;&nbsp;&nbsp; 
+					<input type="reset" value="취소">
+					<span class="textLink" onclick="rsJoin()">rsJoin</span>
+				</td>
 			</tr>
 		</table>
 	</form>

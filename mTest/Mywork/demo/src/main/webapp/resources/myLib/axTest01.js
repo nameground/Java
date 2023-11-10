@@ -6,7 +6,7 @@
 // => form 출력
 function rsLoginf() {
 	let resultHtml = 
-	`<table border=1 align=center width=80%>
+	`<table align=center>
 		<caption><h3>** Ajax Login  **<h3></caption>
 		<tr height="40">
 		   <td bgcolor="Aqua">
@@ -24,10 +24,11 @@ function rsLoginf() {
 		   		<input type="password" id="password" name="password">
 		   </td>
 		</tr>
-		<tr height="40"><td></td>
-		   <td>
+		<tr height="40">
+		   <td colspan=2>
 		     	<span class="textlink" onclick="rsLogin()">rsLogin</span>&nbsp;&nbsp;
 		     	<span class="textlink" onclick="rsLoginJJ()">rsLoginJJ</span>&nbsp;&nbsp;
+		     	<span class="textlink" onclick="axiLoginJJ()">axiLoginJJ</span>&nbsp;&nbsp;
 		   		<input type="reset" value="취소">
 		   </td>
 		</tr>
@@ -116,3 +117,57 @@ function rsLoginJJ() {
 	});
 
 }
+
+// =============================================================================================
+
+// 2. Axios Login
+// => 라이브러리 추가 (CDN 으로..   axTest01.js 에)
+// => 서버요청은 위 "1.3) rsLoginJJ" 과 동일하게 rsloginjj 
+// => JSON <-> JSON
+// => Request
+//   - data  : JSON Type 기본 (fetch 처럼 JSON.stringify 필요없음) 
+//   - header: {'Content-Type': 'application/json'}  
+// => Response
+//    - then : 응답 Data는 매개변수.data 로 접근가능, JSON Type 기본 (1단계로 모두 받음: fetch 와 차이점))   
+//    - catch
+//      . axios는 상태코드가 2xx의 범위를 넘어가면 거부(reject) 되어 catch절로 분기함 
+//         이때 catch 절의 매개변수는 response 속성으로 error 내용 전체를 객체형태로 전달받음   
+//      . error.response : error 내용 전체를 객체형태로 전달받음
+//      . error.response.status : status 확인가능   
+//      . error.message : 브라우져의 Error_Message, "Request failed with status code 415
+function axiLoginJJ() {
+	let url="/rest/rsloginjj"; // rsloginjj11 -> 404 Test
+	
+	axios({ 
+		url : url,
+		method : 'Post',
+		headers : { 'Content-Type' : 'application/json' },
+		data : {
+			id:document.getElementById('id').value,
+			password:document.getElementById('password').value
+		}
+	}).then(response => {
+		alert(`response.data = ${response.data}`);	
+		alert(`response : id = ${response.data.id}, name = ${response.data.username}`);	
+		location.reload();
+		
+	}).catch(err => {
+		console.error(`err.response = ${err.response},
+		err.response.status = ${err.response.status},
+		err.message = ${err.message}`);
+		
+		if(err.response.status == '502') {
+			alert("id or password Error. retry");
+		}else {
+			alert("System Error => " + err.message);
+		}
+	});
+	
+}
+
+// =============================================================================================
+
+
+
+
+
