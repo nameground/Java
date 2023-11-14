@@ -8,6 +8,12 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="axMemberList"/>
+			<item value="List"/>
+			<item value="list"/>
+			<item value="delete"/>
+			<item value="file"/>
+			<item value="filr"/>
 			<item value="stepUpdate"/>
 			<item value="stepupdate"/>
 			<item value="Spring02"/>

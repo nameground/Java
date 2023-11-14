@@ -16,15 +16,12 @@ import com.example.demo.service.MemberService;
 
 import lombok.AllArgsConstructor;
 
-//@Log4j
 @RequestMapping(value="/jo")
 @AllArgsConstructor
 @Controller
 public class JoController {
 	
-	//@Autowired
 	JoService service;
-	//@Autowired
 	MemberService mservice;
 	 
 	// ** JoList
@@ -83,7 +80,7 @@ public class JoController {
 	
 	// ** Update
 	@PostMapping(value="/jupdate")
-	public String jupdate(HttpServletRequest request, Model model, JoDTO dto, RedirectAttributes rttr) {
+	public String jupdate(Model model, JoDTO dto, RedirectAttributes rttr) {
 		
 		// ** Update Service 처리
 		// => 성공: joList 로 redirect

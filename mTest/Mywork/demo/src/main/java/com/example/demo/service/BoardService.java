@@ -8,11 +8,14 @@ import criTest.SearchCriteria;
 
 public interface BoardService {
 	
-	// Board_cri_Paging
-	List<BoardDTO> bcriList(SearchCriteria cri); // 출력할 Data만 select
-	int criTotalCount(SearchCriteria cri); // 출력대상인 전체 rows 개수
+	// REST API, Axios Test
+	List<BoardDTO> idBList(String id);
 	
-	// 답글등록
+	// ** Board_Cri_Paging
+	List<BoardDTO> bcriList(SearchCriteria cri); // 출력할 Data만 select
+	int criTotalCount(SearchCriteria cri); // 출력대상인 전체 rows 갯수
+
+	// ** 답글등록
 	int rinsert(BoardDTO dto);
 	
 	// ** selectList

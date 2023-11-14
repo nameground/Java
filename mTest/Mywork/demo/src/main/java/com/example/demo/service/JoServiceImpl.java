@@ -9,10 +9,13 @@ import com.example.demo.domain.JoDTO;
 
 import mapperInterface.JoMapper;
 
+//** interface 자동완성 
+//=> Alt + Shift + T  
+//=> 또는 마우스우클릭 PopUp Menu 의  Refactor - Extract Interface...
+
 @Service
 public class JoServiceImpl implements JoService {
-	// ** 전역변수 정의
-	// MemberDAO dao = new MemberDAO();
+	
 	@Autowired
 	JoMapper mapper;
 	
@@ -26,22 +29,20 @@ public class JoServiceImpl implements JoService {
 	public JoDTO selectOne(JoDTO dto) {
 		return mapper.selectOne(dto);
 	}
-
-	// ** insert
+	// ** Insert
 	@Override
 	public int insert(JoDTO dto) {
 		return mapper.insert(dto);
 	}
-	// ** update
+	// ** Update
 	@Override
 	public int update(JoDTO dto) {
 		return mapper.update(dto);
 	}
-	// ** delete
+	// ** Delete
 	@Override
 	public int delete(JoDTO dto) {
 		return mapper.delete(dto);
 	}
 
-	
 } //class

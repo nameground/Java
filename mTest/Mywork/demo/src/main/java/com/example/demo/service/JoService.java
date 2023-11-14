@@ -5,6 +5,7 @@ import java.util.List;
 import com.example.demo.domain.JoDTO;
 
 
+
 public interface JoService {
 
 	// ** selectList
@@ -13,13 +14,13 @@ public interface JoService {
 	// ** selectOne
 	JoDTO selectOne(JoDTO dto);
 
-	// ** insert
+	// ** Insert
 	int insert(JoDTO dto);
 
-	// ** update
+	// ** Update
 	int update(JoDTO dto);
 
-	// ** delete
+	// ** Delete
 	int delete(JoDTO dto);
 
 }

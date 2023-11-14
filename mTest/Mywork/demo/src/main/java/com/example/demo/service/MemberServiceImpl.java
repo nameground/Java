@@ -13,11 +13,10 @@ import mapperInterface.MemberMapper;
 public class MemberServiceImpl implements MemberService {
 	
 	// ** 전역변수 정의
-	//MemberDAO dao = new MemberDAO();
 	@Autowired
 	MemberMapper mapper;
 	
-	// ** RTestController incheck2 Test
+	// ** RTestControler incheck2 Test
 	@Override
 	public MemberDTO selectOneJno(String id, Integer jno) {
 		return mapper.selectOneJno(id, jno);
