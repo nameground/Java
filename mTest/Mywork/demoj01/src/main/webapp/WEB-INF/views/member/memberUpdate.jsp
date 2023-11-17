@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Spring_MVC2 MemberUpdate</title>
+<title>Spring JPA MemberUpdate</title>
 <script src="/Spring02/resources/myLib/jquery-3.2.1.min.js"></script>
 </head>
 <body>

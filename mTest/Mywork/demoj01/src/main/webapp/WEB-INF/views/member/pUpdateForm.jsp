@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>** Spring Boot Password Update **</title>
+<title>** Spring JPA  Password Update **</title>
 <link rel="stylesheet" type="text/css" href="/Spring02/resources/myLib/myStyle.css" >
 <script>
 	function pCheck() {

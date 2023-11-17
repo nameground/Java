@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
  <link rel="stylesheet" type="text/css" href="/Spring02/resources/myLib/myStyle.css">
-<title>SpringBoot MemberList</title>
+<title>Spring JPA MemberList</title>
 </head>
 <body>
 <h2>SpringBoot MemberList</h2>

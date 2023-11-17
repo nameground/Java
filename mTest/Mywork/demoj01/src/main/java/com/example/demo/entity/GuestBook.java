@@ -29,6 +29,9 @@ import lombok.ToString;
 // @Table(name = "guestbook")
 //=> Entity에 해당하는 테이블을 name 속성을 사용하여 매핑함.
 //	 name 생략시에는 클래스의 이름이 매핑됨
+//	 Table, Column 명에 카멜표기 사용시 JPA는 "_" 적용함.
+//  - GuestBook -> guest_book
+//  - Guestbook -> guest_book
 
 
 @Getter
@@ -44,10 +47,10 @@ public class GuestBook extends BaseEntity {
 
 	// => id로 설정된 기본키의 값을 자동으로 생성할때 사용
 	// => strategy 속성: 키 생성전략
-	//      - GenerationType.AUTO: default, JPA구현체 (Hibernate 등)가 생성방식 결정  
-	//      - GenerationType.IDENTITY: DB가 생성방식 결정 (MySql, Maria 는 auto_increment)  
-	//      - GenerationType.SEQUENCE: DB의 sequence를 이용해 생성, @SequenceGenerator 와 같이 사용  
-	//      - GenerationType.TABLE: 키생성 전용 테이블을 생성해서 키생성, @TableGenerator 와 같이 사용 
+	//   - GenerationType.AUTO: default, JPA구현체 (Hibernate 등)가 생성방식 결정  
+	//   - GenerationType.IDENTITY: DB가 생성방식 결정 (MySql, Maria 는 auto_increment)  
+	//   - GenerationType.SEQUENCE: DB의 sequence를 이용해 생성, @SequenceGenerator 와 같이 사용  
+	//   - GenerationType.TABLE: 키생성 전용 테이블을 생성해서 키생성, @TableGenerator 와 같이 사용 
 	private Long gno;
 
 	@Column(name = "title", length = 100, nullable = false)

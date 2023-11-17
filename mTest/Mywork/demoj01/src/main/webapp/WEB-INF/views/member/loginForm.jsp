@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
  <link rel="stylesheet" type="text/css" href="/Spring02/resources/myLib/myStyle.css">
-<title>**  member Login Test **</title>
+<title>** Spring JPA member Login Test **</title>
 </head>
 <body>
 

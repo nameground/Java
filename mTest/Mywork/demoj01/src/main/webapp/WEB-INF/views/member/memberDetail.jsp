@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>** SpringBoot Student Detail **</title>
+<title>** Spring JPA Student Detail **</title>
 </head>
 <body>
 <h2>** SpringBoot Student Detail **</h2>
