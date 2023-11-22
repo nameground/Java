@@ -1,13 +1,6 @@
-INDEX VERSION 1.4+C:\IDESET\Web\mTest\Mywork\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2304041833.index
+INDEX VERSION 1.4+D:\김진휘\참고\mTest\Mywork\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 378929618.index
-3435648363.index
-584296707.index
-2750801245.index
-2918346854.index
-2307806274.index
-277284344.index
-3033622358.index
-593847543.index
-848930447.index
 2409582696.index
+3435648363.index
+277284344.index
+2307806274.index
